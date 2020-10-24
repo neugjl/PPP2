@@ -1,6 +1,7 @@
-all:helloworld enter_name check_repeat object_type conversion square read_two_ints read_two_doubles unit_conversion unit_conversion_class exception celsius_to_kelvin calculator calculator_2 file_io fltk
+all:helloworld enter_name check_repeat object_type conversion square read_two_ints read_two_doubles unit_conversion unit_conversion_class exception celsius_to_kelvin calculator calculator_2 file_io fltk map fork fork2 hello_world_thread helloworld_map helloworld_link helloworld_key_operations
 
-
+map: map.cpp
+	clang++ map.cpp -o map -std=c++17
 exception: exception.cpp
 	clang++ exception.cpp -o exception -std=c++17
 fltk: fltk.cpp
@@ -36,8 +37,20 @@ object_type: object_type.cpp
 	clang++ object_type.cpp -o object_type -std=c++17
 enter_name: enter_name.cpp
 	clang++ enter_name.cpp -o enter_name -std=c++17
+helloworld_link: helloworld_link.cpp
+	clang++ helloworld_link.cpp -o helloworld_link -std=c++17
+helloworld_key_operations: helloworld_key_operations.cpp
+	clang++ helloworld_key_operations.cpp -o helloworld_key_operations -std=c++17
+helloworld_map: helloworld_map.cpp
+	clang++ helloworld_map.cpp -o helloworld_map -std=c++17
 helloworld: helloworld.cpp
 	clang++ helloworld.cpp -o helloworld -std=c++17
+fork: fork.cpp
+	clang++ fork.cpp -o fork -std=c++17
+fork2: fork2.cpp
+	clang++ fork2.cpp -o fork2 -std=c++17
+hello_world_thread: hello_world_thread.cpp
+	clang++ hello_world_thread.cpp -o hello_world_thread -std=c++17 -pthread
 .PHONY:clean
 clean:
-	rm helloworld enter_name check_repeat object_type conversion square read_two_ints read_two_doubles unit_conversion unit_conversion_class exception celsius_to_kelvin calculator calculator_2 file_io fltk
+	rm helloworld enter_name check_repeat object_type conversion square read_two_ints read_two_doubles unit_conversion unit_conversion_class exception celsius_to_kelvin calculator calculator_2 file_io fltk map fork fork2 hello_world_thread helloworld_map helloworld_link helloworld_key_operations
